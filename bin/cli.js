@@ -1,17 +1,20 @@
-let exec = require('child_process').exec;
+#! /usr/bin/env node
+
 let path = require('path');
 let fs = require('fs');
 let os = require('os').platform();
 
-const directorys = ['bin', 'public', 'routes', 'setup', 'views']
+const directorys = ['bin', 'public', 'models', 'routes', 'views', 'setup']
 const publicDirectorys = ['css', 'imgs', 'js', 'lib']
-let apiName = process.argv[2];
+
+let appName = process.argv[2];
+
 let bar = "//";
 if(os.indexOf('win') != -1) bar = "\\";
 bar = bar.substring(0,1); // needing for escaping to \
 
 let pkg = {
-    name: apiName,
+    name: appName,
     version: '1.0.0',
     scripts: {
       start: 'node ./app'
@@ -22,13 +25,14 @@ let pkg = {
     }
   }
 
-console.clear();
+
 function createProject(){
-    fs.mkdir(apiName, (err)=>{
+    console.clear();
+    fs.mkdir(appName, (err)=>{
         if(!err){
-            console.log('   \x1b[36mcreate\x1b[0m : ' +apiName);
-            createJsonFile(apiName+bar+'package', pkg)
-            createDirectorys(apiName,directorys, true);
+            console.log('   \x1b[36mcreate\x1b[0m : ' +appName);
+            createJsonFile(appName+bar+'package', pkg)
+            createDirectorys(appName,directorys, true);
         }else{
             if(err.code == 'EEXIST')
                 console.log('ERROR!! - a directory with this name already exists!')
@@ -45,15 +49,10 @@ function createDirectorys(base, dirs, next){
         });
     });
     if(next){
-        createDirectorys(apiName+bar+directorys[1], publicDirectorys, false);
+        createDirectorys(appName+bar+directorys[1], publicDirectorys, false);
     }
 }
 
-function removeProject(callback){
-    new exec('rm -rf '+apiName, (err)=>{
-        callback(err);
-    });
-}
 
 function createJsonFile(name, package){
     fs.writeFileSync(name+'.json', JSON.stringify(package, null, 2), (err)=>{

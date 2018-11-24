@@ -1,24 +1,27 @@
 {
   "name": "express-create-app",
   "version": "1.0.0",
-  "description": "preconfigured express application generator",
-  "main": "./bin/app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/app.js"
-  },
-  "keywords": [
-    "express",
-    "generator",
-    "app"
-  ],
-  "author": "drummerzzz",
-  "license": "MIT",
+  "description": "Create a preconfigured express application - Cria uma aplicação express pré configurada",
+  "main": "index.js",
   "bin": {
-    "express-create-app": "./bin/app.js"
+    "express-create-app": "cli.js"
   },
-  "dependencies": {
-    "express": "^4.16.4",
-    "express-load": "^1.1.16"
-  }
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drummerzzz/express-create-app.git"
+  },
+  "author": {
+    "name": "João Filho",
+    "email": "jf.interatividade@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drummerzzz/express-create-app/"
+  },
+  "homepage": "https://github.com/drummerzzz/express-create-app#readme"
 }
