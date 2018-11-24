@@ -1,6 +1,6 @@
 {
   "name": "express-create-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Create a preconfigured express application - Cria uma aplicação express pré configurada",
   "main": "./bin/cli.js",
   "bin": {
