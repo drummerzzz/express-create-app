@@ -36,10 +36,12 @@ function createProject(){
     console.clear();
     fs.mkdir(appName, (err)=>{
         if(!err){
-            console.log('\x1b[36mSucess :) new project '+appName+' Created!\x1b');
+            console.log('\x1b[36mSucess :) new project '+appName
+            +' Created!\x1b[0m :\n 1 - CD TO '+appName.toLocaleUpperCase()
+            +' folder\n 2 - Run the comamnd NPM INSTALL for install all dependences.\n 3 - Run NPM START');
+            
             createJsonFile(appName+bar+'package', pkg);
             genaratefile('app',appName,'app.js');
-            
             createDirectorys(appName, ['app','bin'], false);
             createDirectorys(appDir, directorys, true);
         }else{
