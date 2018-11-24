@@ -1,0 +1,10 @@
+var homePage = "<http>\n"
++"<head>\n <title> Wellcome</title>\n</head>\n"
++"<body>\n<h1 style='margin: 0 auto; margin-top: 20%' > Hello word! </h1>\n </body>\n"
++"</http>"
+
+module.exports = function(app){
+    app.get('/', function(req, res){
+        res.send(homePage);
+    });
+}
