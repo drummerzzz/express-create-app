@@ -8,7 +8,7 @@ module.exports = function(){
     
     //cofigure views dir, and view engine
     app.set('view engine','ejs');
-    app.set('views', path.join(__dirname, 'views'));
+    app.set('views', './app/views');
     
     //configure json
     app.use(express.json());

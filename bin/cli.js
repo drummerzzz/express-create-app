@@ -6,8 +6,8 @@ let os = require('os').platform();
 
 const directorys = ['infra', 'public', 'models', 'routes', 'views']
 const publicDirectorys = ['css', 'imgs', 'js', 'lib']
-const filesdir = ['routes', 'bin'];
-const filesName = ['route', 'config'];
+const filesdir = ['routes', 'bin','views'];
+const filesName = ['route.js', 'config.js','view.ejs'];
 const settingsFiles = './settings/';
 
 let bar = "//";
@@ -25,8 +25,9 @@ let pkg = {
       start: 'node ./app'
     },
     dependencies: {
+        "ejs": "^2.6.1",
         "express": "^4.16.4",
-        "express-load": "^1.1.16",
+        "express-load": "^1.1.16"
         //"http-errors": "~1.6.2"
     }
   }
@@ -41,7 +42,7 @@ function createProject(){
             +' folder\n 2 - Run the comamnd NPM INSTALL for install all dependences.\n 3 - Run NPM START');
             
             createJsonFile(appName+bar+'package', pkg);
-            genaratefile('app',appName,'app.js');
+            genaratefile('app.js',appName,'app.js');
             createDirectorys(appName, ['app','bin'], false);
             createDirectorys(appDir, directorys, true);
         }else{
@@ -60,7 +61,7 @@ function createDirectorys(base, dirs, next){
                 console.log('   \x1b[36mcreate\x1b[0m : ' +local)
                 let index = filesdir.findIndex(obj => obj == dir);
                 if(index !=-1){
-                    genaratefile(filesName[index], local, filesName[index]+'.js');
+                    genaratefile(filesName[index], local, filesName[index]);
                 }
             };
 
