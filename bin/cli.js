@@ -8,7 +8,7 @@ const directorys = ['infra', 'public', 'models', 'routes', 'views']
 const publicDirectorys = ['css', 'imgs', 'js', 'lib']
 const filesdir = ['routes', 'bin','views'];
 const filesName = ['route.js', 'config.js','view.ejs'];
-const settingsFiles = './settings/';
+const settingsFiles = '../settings/';
 
 let bar = "//";
 if(os.indexOf('win') != -1) bar = "\\";
@@ -85,7 +85,7 @@ function write (file, str) {
   }  
 
 function readFile(name){
-    return fs.readFileSync(path.join(settingsFiles, name)).toString('utf-8');
+    return fs.readFileSync(path.join(__dirname, settingsFiles, name)).toString('utf-8');
 }
 
 function genaratefile(read, dir,name){
