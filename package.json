@@ -1,0 +1,24 @@
+{
+  "name": "express-create-app",
+  "version": "1.0.0",
+  "description": "preconfigured express application generator",
+  "main": "./bin/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/app.js"
+  },
+  "keywords": [
+    "express",
+    "generator",
+    "app"
+  ],
+  "author": "drummerzzz",
+  "license": "MIT",
+  "bin": {
+    "express-create-app": "./bin/app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-load": "^1.1.16"
+  }
+}
