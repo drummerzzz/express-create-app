@@ -1,1 +1,4 @@
 node_modules/*
+
+#para publicar o pacote
+#npm publish --access public

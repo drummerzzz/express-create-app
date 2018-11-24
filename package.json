@@ -1,11 +1,12 @@
 {
   "name": "express-create-app",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Create a preconfigured express application - Cria uma aplicação express pré configurada",
-  "main": "index.js",
+  "main": "./bin/cli.js",
   "bin": {
-    "express-create-app": "cli.js"
+    "express-create-app": "./bin/cli.js"
   },
+  "keywords": ["express", "create", "app"],
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
@@ -15,11 +16,8 @@
     "type": "git",
     "url": "git+https://github.com/drummerzzz/express-create-app.git"
   },
-  "author": {
-    "name": "João Filho",
-    "email": "jf.interatividade@gmail.com"
-  },
-  "license": "ISC",
+  "author": "João Filho <jf.interatividade@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/drummerzzz/express-create-app/"
   },

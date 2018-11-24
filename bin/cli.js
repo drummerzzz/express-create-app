@@ -30,7 +30,7 @@ function createProject(){
     console.clear();
     fs.mkdir(appName, (err)=>{
         if(!err){
-            console.log('   \x1b[36mcreate\x1b[0m : ' +appName);
+            console.log('\x1b[36mSucess :) new project '+appName+' Created!\x1b');
             createJsonFile(appName+bar+'package', pkg)
             createDirectorys(appName,directorys, true);
         }else{
