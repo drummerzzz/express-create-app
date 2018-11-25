@@ -1,4 +1,4 @@
-var app = require('./bin/config')();
+var app = require('./app/bin/config')();
 
 //set port server
 var port = parseInt((process.env.PORT || '3000'), 10)

@@ -4,7 +4,7 @@ let path = require('path');
 let fs = require('fs');
 let os = require('os').platform();
 
-const directorys = ['infra', 'public', 'models', 'routes', 'views']
+const directorys = ['bin', 'public', 'models', 'routes', 'views']
 const publicDirectorys = ['css', 'imgs', 'js', 'lib']
 const filesdir = ['routes', 'bin','views'];
 const filesName = ['route.js', 'config.js','view.ejs'];
@@ -43,7 +43,7 @@ function createProject(){
             
             createJsonFile(appName+bar+'package', pkg);
             genaratefile('app.js',appName,'app.js');
-            createDirectorys(appName, ['app','bin'], false);
+            createDirectorys(appName, ['app'], false);
             createDirectorys(appDir, directorys, true);
         }else{
             if(err.code == 'EEXIST')

@@ -1,6 +1,6 @@
 {
   "name": "express-create-app",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Create a preconfigured express application - Cria uma aplicação express pré configurada",
   "main": "./bin/cli.js",
   "bin": {
@@ -15,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create" : "node ./bin/cli.js api",
+    "create": "node ./bin/cli.js api",
     "remove": "rm -rf api"
   },
   "repository": {
