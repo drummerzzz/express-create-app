@@ -1,6 +1,6 @@
 {
   "name": "express-create-app",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "description": "Create a preconfigured express application - Cria uma aplicação express pré configurada",
   "main": "./bin/cli.js",
   "bin": {
@@ -9,7 +9,7 @@
   "keywords": [
     "express",
     "create",
-    "app"
+    "express-load"
   ],
   "dependencies": {},
   "devDependencies": {},

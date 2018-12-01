@@ -1,7 +1,6 @@
 var express = require('express');
 var load = require('express-load');
 var path = require('path');
-//var createError = require('http-errors');
 
 module.exports = function(){
     var app = express();
@@ -17,12 +16,7 @@ module.exports = function(){
     //configure static files
     app.use(express.static('./app/public'));
     
-    // catch 404 and forward to error handler
-    /*app.use(function(req, res, next) {
-    next(createError(404));
-    });*/
-
-    load('infra',{cwd:'app'})
+    load('bin',{cwd:'app'})
     .then('models')
     .then('routes')
     .into(app);
