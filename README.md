@@ -10,7 +10,7 @@ npm install -g --save express-create-app
 $ express-create-app myAppName
 $ cd myAppName
 $ npm install 
-$ 4° npm start
+$ npm start
 ```
 * be happy :)
 
