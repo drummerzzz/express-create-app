@@ -6,12 +6,12 @@ npm install -g --save express-create-app
 
 # to create a project use
 
-'''
+```
 $ express-create-app myAppName
 $ cd myAppName
 $ npm install 
 $ 4° npm start
-'''
+```
 * be happy :)
 
 
