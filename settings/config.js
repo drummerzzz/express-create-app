@@ -16,8 +16,7 @@ module.exports = function(){
     //configure static files
     app.use(express.static('./app/public'));
     
-    load('bin',{cwd:'app'})
-    .then('models')
+    load('models',{cwd:'app'})
     .then('routes')
     .into(app);
 
